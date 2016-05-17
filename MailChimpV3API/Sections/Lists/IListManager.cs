@@ -2,12 +2,15 @@
 using System.Threading;
 using System.Threading.Tasks;
 using MailChimpV3API.Sections.Lists.Members;
+using MailChimpV3API.Sections.Lists.MergeFields;
 
 namespace MailChimpV3API.Sections.Lists
 {
     public interface IListManager
     {
         IListMembersManager Members { get; }
+
+        IMergeFieldManager MergeFields { get; set; }
 
         /// <summary>
         ///     Deletes a specific list.
