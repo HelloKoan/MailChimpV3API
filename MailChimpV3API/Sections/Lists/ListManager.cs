@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using MailChimpV3API.Sections.Lists.Members;
+using MailChimpV3API.Sections.Lists.MergeFields;
 
 namespace MailChimpV3API.Sections.Lists
 {
@@ -9,13 +10,16 @@ namespace MailChimpV3API.Sections.Lists
     {
         private readonly IMailChimpConnector _connector;
 
-        public ListManager(IMailChimpConnector connector, IListMembersManager listMembersManager)
+        public ListManager(IMailChimpConnector connector, IListMembersManager listMembersManager, IMergeFieldManager mergeFieldManager)
         {
             _connector = connector;
             Members = listMembersManager;
+            MergeFields = mergeFieldManager;
         }
 
         public IListMembersManager Members { get; private set; }
+
+        public IMergeFieldManager MergeFields { get; set; }
 
         public async Task DeleteListAsync(string listId)
         {

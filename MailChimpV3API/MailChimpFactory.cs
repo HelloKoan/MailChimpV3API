@@ -2,6 +2,7 @@
 using MailChimpV3API.Sections.Campaigns;
 using MailChimpV3API.Sections.Lists;
 using MailChimpV3API.Sections.Lists.Members;
+using MailChimpV3API.Sections.Lists.MergeFields;
 using MailChimpV3API.Sections.Reports;
 using MailChimpV3API.Sections.Reports.EmailActivity;
 
@@ -26,7 +27,7 @@ namespace MailChimpV3API
             return new MailChimp(
                 new AccountManager(connector), 
                 new CampaignManager(connector),
-                new ListManager(connector, new ListMembersManager(connector)),
+                new ListManager(connector, new ListMembersManager(connector), new MergeFieldManager(connector)),
                 new ReportManager(connector, new EmailActivityManager(connector)));
         }
     }
