@@ -1,0 +1,12 @@
+mode: ContinuousDelivery
+continuous-delivery-fallback-tag: beta
+assembly-informational-format: '{NuGetVersion}'
+branches:
+  enhancement(s)?[/-]:
+    tag: useBranchName
+    increment: Inherit
+  task(s)?[/-]:
+    tag: useBranchName
+    increment: Inherit
+ignore:
+  sha: []
