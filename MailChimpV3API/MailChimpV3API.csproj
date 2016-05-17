@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Batching\BatchCollectionFilter.cs" />
+    <Compile Include="Batching\BatchOperation.cs" />
+    <Compile Include="Batching\BatchOperationResponse.cs" />
+    <Compile Include="Batching\BatchOperationResultCollection.cs" />
+    <Compile Include="Batching\IMailChimpBatchManager.cs" />
+    <Compile Include="Batching\MailChimpBatchManager.cs" />
     <Compile Include="CollectionSortDirection.cs" />
     <Compile Include="Errors\APIKeyInvalidException.cs" />
     <Compile Include="Errors\APIKeyMissingException.cs" />
