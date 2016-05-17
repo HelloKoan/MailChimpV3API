@@ -1,4 +1,5 @@
-﻿using MailChimpV3API.Sections.Campaigns;
+﻿using MailChimpV3API.Sections.Account;
+using MailChimpV3API.Sections.Campaigns;
 using MailChimpV3API.Sections.Lists;
 using MailChimpV3API.Sections.Lists.Members;
 using MailChimpV3API.Sections.Reports;
@@ -23,10 +24,10 @@ namespace MailChimpV3API
         public IMailChimp Create(IMailChimpConnector connector)
         {
             return new MailChimp(
+                new AccountManager(connector), 
                 new CampaignManager(connector),
                 new ListManager(connector, new ListMembersManager(connector)),
-                new ReportManager(connector, new EmailActivityManager(connector))
-                );
+                new ReportManager(connector, new EmailActivityManager(connector)));
         }
     }
 }
