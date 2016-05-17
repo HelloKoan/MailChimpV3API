@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MailChimpV3</id>
+    <version>$version$</version>
+    <title></title>
+    <authors>Alex Allen, Neal Morris</authors>
+    <owners>Koan</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Api Wrapper for MailChimp's V3 API</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright Koan 2016</copyright>
+    <tags>MailChimp</tags>
+  </metadata>
+</package>
