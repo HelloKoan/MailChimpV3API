@@ -111,6 +111,7 @@
     <Compile Include="Sections\Lists\Members\MailchimpListMember.cs" />
     <Compile Include="Sections\Lists\Members\MailchimpListMembersCollection.cs" />
     <Compile Include="Sections\Lists\Members\MailChimpMergeFieldData.cs" />
+    <Compile Include="Sections\Lists\MergeFields\MergeDataHelper.cs" />
     <Compile Include="Sections\Reports\EmailActivity\EmailActivityCollectionFilter.cs" />
     <Compile Include="Sections\Reports\EmailActivity\EmailActivityManager.cs" />
     <Compile Include="Sections\Reports\EmailActivity\EmailActivityReport.cs" />
