@@ -121,6 +121,7 @@
     <Compile Include="Sections\Lists\Members\MailChimpExportCustomer.cs" />
     <Compile Include="Sections\Lists\Members\MailchimpListMember.cs" />
     <Compile Include="Sections\Lists\Members\MailchimpListMembersCollection.cs" />
+    <Compile Include="Sections\Lists\Members\MailChimpMemberMergeFieldData.cs" />
     <Compile Include="Sections\Lists\Members\MailChimpMergeFieldData.cs" />
     <Compile Include="Sections\Lists\MergeFields\IMergeFieldManager.cs" />
     <Compile Include="Sections\Lists\MergeFields\MergeDataHelper.cs" />
