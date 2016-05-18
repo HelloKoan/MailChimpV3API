@@ -9,6 +9,11 @@ namespace MailChimpV3API.Sections.Lists.Members
     public interface IListMembersManager
     {
         /// <summary>
+        ///     Gets the batch builder object to build list member batch operations to post to MailChimp.
+        /// </summary>
+        IListMembersBatchBuilder BatchBuilder { get; }
+
+        /// <summary>
         ///     Individuals who are currently or have, at one time, been subscribed to this list, includes members who have bounced
         ///     or unsubscribed.
         /// </summary>

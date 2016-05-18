@@ -5,11 +5,11 @@ using Newtonsoft.Json;
 
 namespace MailChimpV3API.Batching
 {
-    public class MailChimpBatchManager : IMailChimpBatchManager
+    public class BatchManager : IBatchManager
     {
         private readonly IMailChimpConnector _connector;
 
-        public MailChimpBatchManager(IMailChimpConnector connector)
+        public BatchManager(IMailChimpConnector connector)
         {
             _connector = connector;
         }

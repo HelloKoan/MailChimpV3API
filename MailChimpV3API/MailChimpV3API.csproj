@@ -66,8 +66,8 @@
     <Compile Include="Batching\BatchOperation.cs" />
     <Compile Include="Batching\BatchOperationResponse.cs" />
     <Compile Include="Batching\BatchOperationResultCollection.cs" />
-    <Compile Include="Batching\IMailChimpBatchManager.cs" />
-    <Compile Include="Batching\MailChimpBatchManager.cs" />
+    <Compile Include="Batching\IBatchManager.cs" />
+    <Compile Include="Batching\BatchManager.cs" />
     <Compile Include="CollectionSortDirection.cs" />
     <Compile Include="Errors\APIKeyInvalidException.cs" />
     <Compile Include="Errors\APIKeyMissingException.cs" />
@@ -113,7 +113,9 @@
     <Compile Include="Sections\Lists\ListManager.cs" />
     <Compile Include="Sections\Lists\MailChimpList.cs" />
     <Compile Include="Sections\Lists\MailchimpListCollection.cs" />
+    <Compile Include="Sections\Lists\Members\IListMembersBatchBuilder.cs" />
     <Compile Include="Sections\Lists\Members\IListMembersManager.cs" />
+    <Compile Include="Sections\Lists\Members\ListMembersBatchBuilder.cs" />
     <Compile Include="Sections\Lists\Members\ListMembersFilter.cs" />
     <Compile Include="Sections\Lists\Members\ListMembersManager.cs" />
     <Compile Include="Sections\Lists\Members\MailChimpExportCustomer.cs" />

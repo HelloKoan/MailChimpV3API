@@ -1,4 +1,5 @@
-﻿using MailChimpV3API.Sections.Account;
+﻿using MailChimpV3API.Batching;
+using MailChimpV3API.Sections.Account;
 using MailChimpV3API.Sections.Campaigns;
 using MailChimpV3API.Sections.Lists;
 using MailChimpV3API.Sections.Lists.Members;
@@ -26,8 +27,9 @@ namespace MailChimpV3API
         {
             return new MailChimp(
                 new AccountManager(connector), 
+                new BatchManager(connector), 
                 new CampaignManager(connector),
-                new ListManager(connector, new ListMembersManager(connector), new MergeFieldManager(connector)),
+                new ListManager(connector, new ListMembersManager(connector, new ListMembersBatchBuilder()), new MergeFieldManager(connector)),
                 new ReportManager(connector, new EmailActivityManager(connector)));
         }
     }

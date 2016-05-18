@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace MailChimpV3API.Batching
 {
-    public interface IMailChimpBatchManager
+    public interface IBatchManager
     {
         BatchOperationResponse Get(string batchOperationId);
 

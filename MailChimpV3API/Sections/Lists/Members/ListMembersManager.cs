@@ -11,10 +11,13 @@ namespace MailChimpV3API.Sections.Lists.Members
     {
         private readonly IMailChimpConnector _connector;
 
-        public ListMembersManager(IMailChimpConnector connector)
+        public ListMembersManager(IMailChimpConnector connector, IListMembersBatchBuilder batchBuilder)
         {
+            BatchBuilder = batchBuilder;
             _connector = connector;
         }
+
+        public IListMembersBatchBuilder BatchBuilder { get; private set; }
 
         public async Task<MailChimpListMembersCollection> GetManyAsync(string listId, ListMembersFilter filter = null, CancellationToken cancellationToken = default(CancellationToken))
         {
