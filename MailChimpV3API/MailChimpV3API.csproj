@@ -119,8 +119,8 @@
     <Compile Include="Sections\Lists\Members\ListMembersFilter.cs" />
     <Compile Include="Sections\Lists\Members\ListMembersManager.cs" />
     <Compile Include="Sections\Lists\Members\MailChimpExportCustomer.cs" />
-    <Compile Include="Sections\Lists\Members\MailchimpListMember.cs" />
-    <Compile Include="Sections\Lists\Members\MailchimpListMembersCollection.cs" />
+    <Compile Include="Sections\Lists\Members\MailChimpListMember.cs" />
+    <Compile Include="Sections\Lists\Members\MailChimpListMembersCollection.cs" />
     <Compile Include="Sections\Lists\Members\MailChimpMemberMergeFieldData.cs" />
     <Compile Include="Sections\Lists\Members\MailChimpMergeFieldData.cs" />
     <Compile Include="Sections\Lists\MergeFields\IMergeFieldManager.cs" />
