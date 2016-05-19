@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using MailChimpV3API.Sections.Campaigns.Content;
 
 namespace MailChimpV3API.Sections.Campaigns
 {
     public interface ICampaignManager
     {
+        ICampaignContentManager ContentManager { get; set; }
+
         Task<IEnumerable<Campaign>> GetAllAsync(CampaignCollectionFilter filter = null, CancellationToken cancellationToken = default(CancellationToken));
 
         Task<CampaignCollection> GetManyAsync(
