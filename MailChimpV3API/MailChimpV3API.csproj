@@ -107,6 +107,7 @@
     <Compile Include="Sections\Campaigns\CampaignCollection.cs" />
     <Compile Include="Sections\Campaigns\CampaignCollectionFilter.cs" />
     <Compile Include="Sections\Campaigns\CampaignManager.cs" />
+    <Compile Include="Sections\Campaigns\CreateCampaignModel.cs" />
     <Compile Include="Sections\Campaigns\ICampaignManager.cs" />
     <Compile Include="Sections\Lists\IListManager.cs" />
     <Compile Include="Sections\Lists\ListFilter.cs" />
