@@ -38,5 +38,21 @@ namespace MailChimpV3API.Sections.Campaigns
         {
             return await _connector.GetAsync<Campaign>(string.Format("campaigns/{0}", campaignId), filter, cancellationToken);
         }
+
+        public Campaign Create(CreateCampaignModel campaignModel)
+        {
+            return _connector.Post<Campaign>(
+                "campaigns",
+                body: campaignModel);
+        }
+
+        public async Task<Campaign> CreateAsync(CreateCampaignModel campaignModel, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            return await
+                _connector.PostAsync<Campaign>(
+                    "campaigns",
+                    body: campaignModel,
+                    cancellationToken: cancellationToken);
+        }
     }
 }
