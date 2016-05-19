@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using MailChimpV3API.Sections.Campaigns.Content;
 
 namespace MailChimpV3API.Sections.Campaigns
 {
@@ -12,6 +13,8 @@ namespace MailChimpV3API.Sections.Campaigns
         {
             _connector = connector;
         }
+
+        public ICampaignContentManager ContentManager { get; set; }
 
         public async Task<IEnumerable<Campaign>> GetAllAsync(CampaignCollectionFilter filter = null, CancellationToken cancellationToken = default(CancellationToken))
         {
