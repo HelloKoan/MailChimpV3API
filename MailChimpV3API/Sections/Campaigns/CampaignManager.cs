@@ -12,6 +12,7 @@ namespace MailChimpV3API.Sections.Campaigns
         public CampaignManager(IMailChimpConnector connector)
         {
             _connector = connector;
+            ContentManager = new CampaignContentManager(_connector);
         }
 
         public ICampaignContentManager ContentManager { get; set; }
