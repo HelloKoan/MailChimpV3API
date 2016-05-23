@@ -14,12 +14,12 @@ namespace MailChimpV3API.Sections.Campaigns.Content
 
         public async Task<CampaignContent> GetAsync(string campaignId)
         {
-            return await _connector.GetAsync<CampaignContent>(string.Format("campaigns/{0}/content"));
+            return await _connector.GetAsync<CampaignContent>(string.Format("campaigns/{0}/content", campaignId));
         }
 
         public CampaignContent Get(string campaignId)
         {
-            return _connector.Get<CampaignContent>(string.Format("campaigns/{0}/content"));
+            return _connector.Get<CampaignContent>(string.Format("campaigns/{0}/content", campaignId));
         }
     }
 }
