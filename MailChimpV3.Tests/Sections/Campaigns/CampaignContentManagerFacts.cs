@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MailChimpV3API;
-using MailChimpV3API.Sections.Campaigns;
 using Xunit;
 
 namespace MailChimpV3.Tests.Sections.Campaigns
