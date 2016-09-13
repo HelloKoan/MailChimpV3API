@@ -12,13 +12,17 @@ namespace MailChimpV3API.Sections.Lists.Members
         /// </summary>
         public IEnumerable<BatchOperation> BuildUpdateOperations(string listId, IEnumerable<MailChimpListMember> members, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return members.Select(x => new BatchOperation
-            {
-                Method = "PATCH",
-                Path = string.Format("/lists/{0}/members/{1}", listId, Hashing.MD5HashString(x.EmailAddress.ToLowerInvariant())),
-                Body = Newtonsoft.Json.JsonConvert.SerializeObject(x)
-            })
-            .ToList();
+            return members
+                .Where(m => m != null && string.IsNullOrWhiteSpace(m.EmailAddress) == false)
+                .Select(member => new BatchOperation
+                                  {
+                                      Method = "PATCH",
+                                      Path = string.Format("/lists/{0}/members/{1}",
+                                                           listId,
+                                                           Hashing.MD5HashString(member.EmailAddress.ToLowerInvariant())),
+                                      Body = Newtonsoft.Json.JsonConvert.SerializeObject(member)
+                                  })
+                .ToList();
         }
     }
 }
